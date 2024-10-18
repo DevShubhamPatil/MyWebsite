@@ -1,0 +1,283 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    height: 100svh;
+    background-color: rgb(233, 233, 233);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+    animation: faceAppear;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+}
+@keyframes faceAppear {
+    from {
+        visibility: hidden;
+    }
+    to{
+        visibility: visible;
+    }
+    
+}
+.face {
+    margin-top: -100px;
+    width: 220px;
+    height: 300px;
+    background-color: rgb(255, 230, 209);
+    border-radius: 50% 50% 60% 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.4s;
+
+}
+
+.eyebrobox {
+    width: 100%;
+    height: 15px;
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.eyebox {
+    width: 100%;
+    height: 30pxpx;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.eye {
+    width: 60px;
+    height: 30px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 90% 90% 90% 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px -6px rgba(170, 123, 123, 0.466);
+
+}
+
+.eyebro {
+    width: 50px;
+    height: 12px;
+    border-top: solid black;
+    transition: transform 0.3s ease-out;
+
+}
+
+.eyebroLeft {
+    border-radius: 50% 90%;
+}
+
+.eyebroRight {
+    border-radius: 90% 50%;
+}
+
+.eb {
+    background-color: black;
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    transition: transform 0.1s ease-out;
+}
+
+.ebR {
+    margin-right: 10px;
+}
+
+.ebL {
+    margin-left: 10px;
+}
+
+.mouth {
+    padding-bottom: 2px;
+    width: 70px;
+    height: 20px;
+    margin-top: 40px;
+    border-radius: 50%;
+    border-bottom: 4px solid rgba(133, 62, 62, 0.671);
+    box-shadow: 0px 4px rgba(184, 79, 79, 0.521);
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------------------ */
+
+:root {
+    --speed: 4.5s;
+    --multi: 0.22s
+}
+
+.containerx {
+    background-color: rgb(18, 15, 41);
+    overflow: hidden;
+    width: 0%;
+    height: 100vh;
+    position: absolute;
+    display: flex;
+    transform-origin: left;
+    animation: container_loading;
+    animation-duration: var(--speed);
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+    z-index: 9;
+    
+}
+
+@keyframes container_loading {
+    0% {
+        width: 0%;
+    }
+
+    25% {
+        width: 100%;
+
+    }
+
+    65% {
+        width: 100%;
+    }
+
+    100% {
+        width: 0%;
+
+    }
+}
+
+@keyframes hex_loading {
+    from {
+        width: 0px;
+    }
+
+    to {
+        width: 54px;
+    }
+}
+
+.hx {
+    width: 0px;
+    height: 7px;
+    background-color: purple;
+    animation: hex_loading, vanish;
+    /* position: absolute; */
+    left: 0;
+    animation-duration: calc(var(--multi) * 1), 3.9s;
+    animation-fill-mode: forwards;
+    transform-origin: left;
+    z-index: 9;
+
+}
+
+.h1 {
+
+    transform: rotate(150deg);
+    position: absolute;
+    top: calc(40vh - 60px);
+    left: calc(50vw);
+    animation-delay: calc(var(--multi) * 4), 0s;
+    border-radius: 0 0 1px 1px;
+
+}
+
+.h2 {
+    transform: rotate(90deg);
+    position: absolute;
+    top: calc(40vh - 36px);
+    left: calc(50vw - 45px);
+    /* left: 1069px; */
+    border-radius: 0 0 1px 1px;
+    animation-delay: calc(var(--multi) * 5), 0s;
+
+}
+
+.h3 {
+    transform: rotate(30deg);
+    position: absolute;
+    top: calc(40vh + 15px);
+    left: calc(50vw - 47px);
+    border-radius: 0 0 1px 1px;
+    animation-delay: calc(var(--multi) * 6), 0s;
+
+}
+
+.h4 {
+    transform: rotate(330deg);
+    position: absolute;
+    top: calc(40vh + 42px);
+    left: calc(50vw - 4px);
+    border-radius: 0 0 1px 1px;
+    animation-delay: calc(var(--multi) * 7), 0s;
+
+}
+
+.h5 {
+    transform: rotate(270deg);
+    position: absolute;
+    top: calc(40vh + 18px);
+    left: calc(50vw + 41px);
+    border-radius: 0 0 1px 1px;
+    animation-delay: calc(var(--multi) * 8), 0s;
+
+}
+
+.h6 {
+    transform: rotate(210deg);
+    position: absolute;
+    top: calc(40vh - 33px);
+    left: calc(50vw + 43px);
+    border-radius: 0 0 1px 1px;
+    animation-delay: calc(var(--multi) * 9), 0s;
+
+}
+
+.s {
+    font-size: 80px;
+    position: absolute;
+    top: calc(40vh - 61px);
+    left: calc(50vw - 16px);
+    color: white;
+    animation: load_s, vanish;
+    animation-delay: 2.2s, 3.81s;
+    animation-duration: 0.3s, 0.1s;
+    animation-fill-mode: forwards, forwards;
+    opacity: 0%;
+    z-index: 9;
+
+}
+
+@keyframes load_s {
+    from {
+        opacity: 0%;
+    }
+
+    to {
+        opacity: 100%;
+    }
+
+}
+
+@keyframes vanish {
+
+    0% {
+        display: block;
+    }
+
+    93% {
+        display: block;
+    }
+
+    100% {
+        display: none;
+    }
+}
